@@ -46,11 +46,11 @@ public Student findTopper(){
 
         for(Student student:students) {
             List<Double> marks=student.getMarks();
-            double perc=0.0;
+            double perc=0 ;
             for(Double mark:marks) {
                 perc+=mark;
             }
-            perc*=0.04;
+            perc*=0.2;
 
             StudentPercentageDTO studentPercentageDTO=new StudentPercentageDTO(
                     student.getRollNumber(),student.getName(),perc);
