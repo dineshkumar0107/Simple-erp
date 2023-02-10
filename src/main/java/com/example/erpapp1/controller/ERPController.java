@@ -1,5 +1,6 @@
 package com.example.erpapp1.controller;
 
+import com.example.erpapp1.DTO.StudentPercentageDTO;
 import com.example.erpapp1.model.Student;
 import com.example.erpapp1.service.ERPService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,15 @@ public class ERPController {
     @GetMapping("find-student/rollno/{rollno}")
     public Student findStudentById(@PathVariable int rollno){
        return erpService.findById(rollno);
+    }
+    @GetMapping("topper")
+    public Student findTopper(){
+        return erpService.findTopper();
+    }
+    @GetMapping("all-percentage")
+    public List<StudentPercentageDTO> findPercentage() {
+        List<StudentPercentageDTO> result=erpService.findAllPercentage();
+        return result;
     }
 
 }
