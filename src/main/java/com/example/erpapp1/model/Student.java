@@ -1,7 +1,16 @@
 package com.example.erpapp1.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+//@Getter
+//@Setter
+@AllArgsConstructor
+@Data
 public class Student {
     private int rollNumber;
     private String name;
@@ -9,62 +18,8 @@ public class Student {
     private List<Double> marks; //5 subject
     private String city;
 
-    public Student(int rollNumber, String name, String gender, List<Double> marks, String city) {
-        this.rollNumber = rollNumber;
-        this.name = name;
-        this.gender = gender;
-        this.marks = marks;
-        this.city = city;
+
+
+
     }
 
-    public int getRollNumber() {
-        return rollNumber;
-    }
-
-    public void setRollNumber(int rollNumber) {
-        this.rollNumber = rollNumber;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public List<Double> getMarks() {
-        return marks;
-    }
-
-    public void setMarks(List<Double> marks) {
-        this.marks = marks;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "rollNumber=" + rollNumber +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", marks=" + marks +
-                ", city='" + city + '\'' +
-                '}';
-    }
-}
