@@ -31,4 +31,10 @@ public class ERPService {
 public List<Student> findAll(){
         return students;
 }
+public Student findById(int rollno){
+        for(Student student:students){
+            if(student.getRollNumber()==rollno) return student;
+        }
+        return null;
+}
 }
